@@ -1,0 +1,13 @@
+import RangePicker from "@/components/RangePicker";
+
+export default function Topbar({ title, subtitle }) {
+  return (
+    <div className="flex flex-col gap-4 border-b border-white/10 px-6 py-5 sm:flex-row sm:items-center sm:justify-between">
+      <div>
+        <h1 className="text-lg font-bold text-white">{title}</h1>
+        {subtitle && <p className="mt-0.5 text-sm text-slate-400">{subtitle}</p>}
+      </div>
+      <RangePicker />
+    </div>
+  );
+}
