@@ -47,7 +47,7 @@ export default function OverviewPage() {
     <div>
       <Topbar title={t("nav_overview")} subtitle={t("brand_tagline")} />
 
-      <div className="space-y-6 p-6">
+      <div className="space-y-6 p-4 sm:p-6">
         <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-4">
           {loading || !payload
             ? Array.from({ length: 4 }).map((_, i) => (

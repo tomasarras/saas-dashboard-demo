@@ -35,7 +35,7 @@ export default function FunnelPage() {
     <div>
       <Topbar title={t("funnel_title")} subtitle={t("funnel_subtitle")} />
 
-      <div className="space-y-6 p-6">
+      <div className="space-y-6 p-4 sm:p-6">
         <ChartCard title={t("funnel_section_title")}>
           {loading || !funnel ? (
             <div className="space-y-3">

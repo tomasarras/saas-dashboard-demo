@@ -57,7 +57,7 @@ export default function UsersPage() {
     <div>
       <Topbar title={t("users_title")} subtitle={t("users_subtitle")} />
 
-      <div className="space-y-4 p-6">
+      <div className="space-y-4 p-4 sm:p-6">
         <div className="flex flex-col gap-3 sm:flex-row sm:items-center">
           <div className="relative flex-1">
             <Search

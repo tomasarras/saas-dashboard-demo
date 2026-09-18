@@ -4,6 +4,7 @@ import Sidebar from "@/components/Sidebar";
 import Footer from "@/components/Footer";
 import { LanguageProvider } from "@/components/LanguageProvider";
 import { RangeProvider } from "@/components/RangeProvider";
+import { SidebarProvider } from "@/components/SidebarProvider";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -30,13 +31,15 @@ export default function RootLayout({ children }) {
       <body className="min-h-full bg-slate-950 text-slate-200">
         <LanguageProvider>
           <RangeProvider>
-            <div className="flex min-h-screen">
-              <Sidebar />
-              <div className="flex flex-1 flex-col">
-                <main className="flex-1">{children}</main>
-                <Footer />
+            <SidebarProvider>
+              <div className="flex min-h-screen">
+                <Sidebar />
+                <div className="flex min-w-0 flex-1 flex-col">
+                  <main className="flex-1">{children}</main>
+                  <Footer />
+                </div>
               </div>
-            </div>
+            </SidebarProvider>
           </RangeProvider>
         </LanguageProvider>
       </body>
